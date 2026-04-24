@@ -4,8 +4,8 @@ Rishihood University | Web Development | Group Project
 ---
 
 ## Contributors
-- **[Your Name]** — [Your Role / What you're handling]
-- **[Teammate Name]** — [Their Role / What they're handling]
+- ** Vansh Jain
+- ** Kapish Garg
 
 ---
 
