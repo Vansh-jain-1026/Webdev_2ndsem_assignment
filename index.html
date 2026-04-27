@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoteIt</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-    
+ 
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <span class="nav-logo">NoteIt</span>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+ 
+    <!-- Home View: Dashboard -->
+    <div id="home-view" class="container">
+        <div class="home-header">
+            <div class="home-stats">
+                <p>You have <span id="total-count">0</span> notes saved.</p>
+            </div>
+            <button class="btn-primary" onclick="showEditor(null)">+ New Note</button>
+        </div>
+ 
+        <h2 class="section-title">Recent Notes</h2>
+        <div id="recent-notes" class="cards-grid">
+            <!-- Recent note cards will be injected here by JS -->
+        </div>
+    </div>
+ 
+    <!-- Editor View: New Note / Edit Note (hidden by default) -->
+    <div id="editor-view" class="container hidden">
+        <div class="editor-header">
+            <button class="btn-back" onclick="showHome()">← Back</button>
+            <h2 id="editor-heading">New Note</h2>
+        </div>
+ 
+        <!-- Hidden input to track if we're editing an existing note -->
+        <input type="hidden" id="editing-note-id" value="" />
+ 
+        <div class="editor-form">
+            <input
+                type="text"
+                id="note-title"
+                class="title-input"
+                placeholder="Note title..."
+                maxlength="100"
+            />
+            <textarea
+                id="note-content"
+                class="content-input"
+                placeholder="Start writing your note here..."
+            ></textarea>
+            <div class="editor-actions">
+                <p id="editor-message" class="editor-msg"></p>
+                <button class="btn-primary" onclick="saveNote()">Save Note</button>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="script.js"></script>
 </body>
 </html>
