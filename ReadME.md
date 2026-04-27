@@ -1,4 +1,4 @@
-# NoteIt - Capstone Project (Sem 1)
+# NoteIt - Capstone Project (Sem 2)
 Rishihood University | Web Development | Group Project
 
 ---
