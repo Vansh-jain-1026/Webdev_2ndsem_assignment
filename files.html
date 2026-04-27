@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoteIt - Files</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+ 
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <span class="nav-logo">NoteIt</span>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="files.html" class="active">Files</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+ 
+    <div class="container">
+        <div class="files-header">
+            <h2 class="section-title">All Notes</h2>
+            <p id="files-count" class="files-count"></p>
+        </div>
+ 
+        <!-- All note cards will be injected here by JS -->
+        <div id="all-notes" class="cards-grid">
+        </div>
+ 
+        <!-- Shown when there are no notes -->
+        <div id="empty-state" class="empty-state hidden">
+            <p>No notes yet. Go to Home and create your first one.</p>
+            <a href="index.html" class="btn-primary">Go to Home</a>
+        </div>
+    </div>
+ 
+    <script src="script.js"></script>
+</body>
+</html>
