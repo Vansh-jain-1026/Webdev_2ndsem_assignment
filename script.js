@@ -1,5 +1,5 @@
 // Base URL of your Flask backend
-const API_URL = "http://127.0.0.1:5001";
+const API_URL = "https://webdev-2ndsem-assignment.onrender.com";
 
 // Formats a date string like "27 Apr 2026"
 function formatDate(dateString) {
