@@ -10,9 +10,13 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)  # Allow all origins so frontend can connect from any port (e.g. 5500)
 
-# Connect to Supabase using credentials from .env file
-SUPABASE_URL = "https://ykccdifabhyxpnghewgv.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlrY2NkaWZhYmh5eHBuZ2hld2d2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyNDc0MjIsImV4cCI6MjA5MjgyMzQyMn0.Mtz_JezQLzmP63bmz7d3bumrI4hiTlFV0Tii_WRLYRE"
+# Connect to Supabase using credentials from environment variables
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+
+if not SUPABASE_URL or not SUPABASE_KEY:
+    print("WARNING: SUPABASE_URL or SUPABASE_KEY not found in environment variables.")
+
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
  
  
